@@ -1,0 +1,17 @@
+{
+  "home": "Home",
+  "gallery": "Gallery",
+  "about": "About",
+  "homePage": {
+    "companyName": "Beirut Road Trading Company",
+    "companyDescription": "A company specialized in selling clothing and beauty products, offering the latest trends at competitive prices. The company is headquartered in Baghdad and is committed to providing high quality products and excellent customer service.",
+    "companyDescriptionButton": "About Us",
+    "aboutUs": "About us",
+    "aboutUsContent": "We are a company specialized in clothing and cosmetics trading, headquartered in Baghdad. We offer a wide range of the latest fashion and personal care products, committed to providing high quality products at competitive prices to meet the needs of all our customers. We always strive to provide a distinctive shopping experience and exceptional customer service to ensure your satisfaction and trust.",
+    "OurGallery": "Our Gallery",
+    "OurGalleryButton": "See More",
+    "contactUs": "Contact Us",
+    "contactUsContent": "Feel free to send us a message",
+    "contactUsButton": "Get Started"
+  }
+}

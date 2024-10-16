@@ -3,7 +3,10 @@ import { Button, Typography, Card } from "@material-tailwind/react";
 import { Link } from "react-router-dom";
 import { Eye } from "lucide-react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+import { useTranslation } from "react-i18next"; // Import useTranslation
+
 const Home = () => {
+  const { t } = useTranslation(); // Initialize useTranslation hook
   const [modalOpen, setModalOpen] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
 
@@ -25,7 +28,7 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-white font-tajawal" >
+    <div className="bg-white font-tajawal">
       {/* Main Section */}
       <section className="container mx-auto py-20">
         <div className="flex flex-col md:flex-row items-center justify-between">
@@ -34,18 +37,17 @@ const Home = () => {
             <div className="max-w-lg">
               <div className="h-1 w-10 bg-black mb-4"></div>
               <h1 className="font-bold text-4xl md:text-5xl mb-6">
-                Beirut Road Trading Company
+                {t("homePage.companyName")} {/* Translate company name */}
               </h1>
-              <p
-                className="text-lg text-gray-700 mb-6"
-              >
-                A company specialized in selling clothing and beauty products, offering the latest trends at competitive prices. The company is headquartered in Baghdad and is committed to providing high quality products and excellent customer service.              </p>
+              <p className="text-lg text-gray-700 mb-6">
+                {t("homePage.companyDescription")} {/* Translate company description */}
+              </p>
               <Link to={"/about"}>
                 <Button
                   color="black"
                   className="rounded-full hover:bg-gray-800 px-6 py-2 text-lg md:text-lg"
                 >
-                  About us
+                  {t("homePage.companyDescriptionButton")} {/* Translate button text */}
                 </Button>
               </Link>
             </div>
@@ -67,7 +69,7 @@ const Home = () => {
       {/* WHO WE ARE */}
       <section className="bg-gray-100 py-20">
         <div className="container mx-auto flex flex-col md:flex-row items-center">
-        <div className="w-full md:w-1/2 flex justify-center items-center p-8">
+          <div className="w-full md:w-1/2 flex justify-center items-center p-8">
             <img
               src="/t-shirt-home.webp"
               alt="Minimalist room design"
@@ -75,25 +77,19 @@ const Home = () => {
             />
           </div>
           <div className="w-full md:w-1/2 p-8 flex flex-col justify-center">
-            <h2 className="text-5xl font-bold mb-6">About us</h2>
+            <h2 className="text-5xl font-bold mb-6">{t("homePage.aboutUs")}</h2> {/* Translate About Us section title */}
             <p className="text-gray-700 mb-8 text-lg">
-              We are a company specialized in clothing and cosmetics trading, headquartered in Baghdad. We offer a wide range of the latest fashion and personal care products, committed to providing high quality products at competitive prices to meet the needs of all our customers. We always strive to provide a distinctive shopping experience and exceptional customer service to ensure your satisfaction and trust.
+              {t("homePage.aboutUsContent")} {/* Translate About Us content */}
             </p>
-            {/* <Button className="bg-lime-300 text-gray-800 rounded-full w-40 py-3 hover:bg-lime-400 transition-colors">
-              Shop now
-            </Button> */}
           </div>
-
         </div>
       </section>
 
       {/* Gallery Section */}
       <section className="py-10 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h1
-            className="text-4xl md:text-5xl font-bold text-center mb-8" // Reduced heading size and margin
-          >
-            Our Gallery
+          <h1 className="text-4xl md:text-5xl font-bold text-center mb-8">
+            {t("homePage.OurGallery")} {/* Translate Gallery section title */}
           </h1>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {/* Left Column: Two stacked images */}
@@ -101,13 +97,13 @@ const Home = () => {
               {staticImages.slice(0, 2).map((image, index) => (
                 <div
                   key={index}
-                  className="group relative overflow-hidden rounded-[20px] shadow-md transition-all duration-300 hover:shadow-lg cursor-pointer" // Reduced shadow and rounded corners
+                  className="group relative overflow-hidden rounded-[20px] shadow-md transition-all duration-300 hover:shadow-lg cursor-pointer"
                   onClick={() => openModal(image)} // Open modal on image click
                 >
                   <img
                     src={image}
                     alt={`Gallery Image ${index + 1}`}
-                    className="w-full h-full object-cover rounded-[20px] transition-transform duration-300 group-hover:scale-105" // Set fixed height for images
+                    className="w-full h-full object-cover rounded-[20px] transition-transform duration-300 group-hover:scale-105"
                     loading="lazy"
                     onError={(e) => {
                       if (!e.target.src.endsWith("placeholder-image.jpg")) {
@@ -127,7 +123,7 @@ const Home = () => {
                 <img
                   src={staticImages[2]}
                   alt="Tall Image"
-                  className="w-full h-full object-cover rounded-[20px] transition-transform duration-300 group-hover:scale-105" // Set fixed height for tall image
+                  className="w-full h-full object-cover rounded-[20px] transition-transform duration-300 group-hover:scale-105"
                   loading="lazy"
                   onError={(e) => {
                     if (!e.target.src.endsWith("placeholder-image.jpg")) {
@@ -140,13 +136,9 @@ const Home = () => {
           </div>
           {/* See More Button */}
           <div className="text-center mt-8">
-            {" "}
-            {/* Reduced margin */}
             <Link to="/gallery">
-              <button
-                className="bg-black text-white rounded-full hover:bg-gray-800 px-6 py-2 text-lg font-semibold" // Reduced padding
-              >
-                See more
+              <button className="bg-black text-white rounded-full hover:bg-gray-800 px-6 py-2 text-lg font-semibold">
+                {t("homePage.OurGalleryButton")} {/* Translate See More button */}
               </button>
             </Link>
           </div>
@@ -162,21 +154,15 @@ const Home = () => {
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>
         <div className="relative z-10 text-center w-full">
-          <h1
-            className="text-3xl md:text-5xl font-bold text-white mb-4"
-          >
-            Contact us
+          <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
+            {t("homePage.contactUs")}
           </h1>
-          <p
-            className="text-lg text-gray-300 mb-8"
-          >
-            Feel free to send us a message
+          <p className="text-lg text-gray-300 mb-8">
+            {t("homePage.contactUsContent")}
           </p>
           <a href="mailto:nfoddddd@beirut.iq">
-            <button
-              className="bg-white rounded-full hover:bg-gray-300 px-6 py-1 text-gray-800 font-semibold text-lg"
-            >
-              Get Started
+            <button className="bg-white rounded-full hover:bg-gray-300 px-6 py-1 text-gray-800 font-semibold text-lg">
+              {t("homePage.contactUsButton")}
             </button>
           </a>
         </div>
@@ -201,7 +187,7 @@ const Home = () => {
             <img
               src={selectedImage}
               alt="Large View"
-              className="max-w-[400px] h-auto rounded-lg" // Set a maximum width for the image
+              className="max-w-[400px] h-auto rounded-lg"
             />
           </div>
         </div>

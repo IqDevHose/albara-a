@@ -1,6 +1,7 @@
-
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
+import i18n from '../lib/i18next';
 
 const NavLink = ({ to, children }) => (
   <Link
@@ -17,6 +18,7 @@ const NavLink = ({ to, children }) => (
 
 export function MyNavbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -29,19 +31,22 @@ export function MyNavbar() {
   }, []);
 
   const navItems = [
-    { name: "Home ", path: "/" },
-    { name: "Gallery", path: "/gallery" },
-    { name: "About", path: "/about" },
-
+    { name: t("home"), path: "/" },
+    { name: t("gallery"), path: "/gallery" },
+    { name: t("about"), path: "/about" }
   ];
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+
+    document.documentElement.setAttribute("dir", lng === 'ar' ? 'rtl' : 'ltr');
+
+  };
 
   return (
     <nav className="sticky top-0 z-10 bg-white/80 backdrop-blur-md shadow-sm">
-      {/* Adjusted padding */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
-        <div className="flex items-center justify-between h-16 md:h-20"> {/* Increased height */}
-
-
+        <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex">
             <Link to="/" className="flex-shrink-0">
               <img
@@ -52,19 +57,20 @@ export function MyNavbar() {
             </Link>
           </div>
 
-
           <div className="hidden md:block">
-            {/* Increased space between items */}
             <div className="ml-10 flex items-baseline gap-6 text-xl">
-
               {navItems.map((item) => (
                 <NavLink key={item.name} to={item.path}>
                   {item.name}
                 </NavLink>
               ))}
+              {/* Language Toggle Button */}
+              <div>
+                <button onClick={() => changeLanguage('en')} className="mx-2">EN</button>
+                <button onClick={() => changeLanguage('ar')} className="mx-2">AR</button>
+              </div>
             </div>
           </div>
-
 
           <div className="md:hidden">
             <button
@@ -113,7 +119,7 @@ export function MyNavbar() {
 
       {isOpen && (
         <div className="md:hidden">
-          <div className="px-4 pt-4 pb-6 space-y-2 sm:px-6"> {/* Adjusted padding and spacing */}
+          <div className="px-4 pt-4 pb-6 space-y-2 sm:px-6">
             {navItems.map((item) => (
               <Link
                 key={item.name}
