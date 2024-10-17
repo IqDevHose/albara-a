@@ -11,10 +11,10 @@ const Home = () => {
   const [selectedImage, setSelectedImage] = useState("");
 
   const staticImages = [
-    "/assets/IMG-20240929-WA0064.jpg",
-    "/assets/IMG-20240929-WA0070.jpg",
-    "/assets/IMG-20240929-WA0054.jpg",
-    "/assets/IMG-20240929-WA0062.jpg"
+    "/assets/IMG-20240929-WA0042.jpg",
+    "/assets/IMG-20240929-WA0047.jpg",
+    "/assets/IMG-20240929-WA0049.jpg",
+    "/assets/IMG-20240929-WA0052.webp"
   ];
 
   const openModal = (image) => {
@@ -57,7 +57,7 @@ const Home = () => {
           <div className="w-full md:w-1/2 flex justify-center px-4">
             <Card className="w-full max-w-lg overflow-hidden rounded-[30px]">
               <img
-                src="/assets/IMG-20240929-WA0094.webp"
+                src="/assets/IMG-20240929-WA0051.webp"
                 alt="Fashion Model"
                 className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
               />
@@ -71,7 +71,7 @@ const Home = () => {
         <div className="container mx-auto flex flex-col md:flex-row items-center">
           <div className="w-full md:w-1/2 flex justify-center items-center p-8">
             <img
-              src="/t-shirt-home.webp"
+              src="/assets/IMG-20240929-WA0050.webp"
               alt="Minimalist room design"
               className="w-full max-w-md h-auto object-contain transition-transform duration-300 hover:scale-105"
             />
@@ -149,7 +149,7 @@ const Home = () => {
       <section
         className="relative bg-cover bg-center h-80 flex items-center"
         style={{
-          backgroundImage: "url('/assets/IMG-20240929-WA0069.jpg')",
+          backgroundImage: "url('/assets/IMG-20240929-WA0052.webp')",
         }}
       >
         <div className="absolute inset-0 bg-black opacity-60"></div>
