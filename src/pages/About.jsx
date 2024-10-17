@@ -1,65 +1,131 @@
 import React from "react";
+import { useTranslation } from "react-i18next"; // Import useTranslation
 
 const About = () => {
+  const { t } = useTranslation(); // Initialize useTranslation hook
+
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section with Mini Image */}
-      <section className="container mx-auto px-6 py-16 text-center">
+      <section className="container mx-auto px-6 py-16">
         <div className="flex flex-col items-center mb-8">
           <img
-            src="/beruit-WHITEBACKGROUND.svg" // Ensure this path is correct based on your project structure
+            src="/logo.png" // Ensure this path is correct based on your project structure
             alt="About Us Hero"
-            className="w-64 h-48 object-cover rounded-full mb-6"
+            className="w-64 h-48 object-cover mb-10"
           />
           <h1 className="text-4xl md:text-6xl font-bold text-gray-800">
-            About Us
+            {t("aboutUs.title")}
           </h1>
         </div>
-        <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto text-left md:text-center">
-          We are a company specialized in clothing and cosmetics trading, keen
-          to provide a diverse range of the latest fashion trends and beauty
-          products that meet the needs of all customers. We believe in the
-          importance of quality and carefully select our products to ensure
-          customer satisfaction. We also strive to provide an easy and
-          comfortable shopping experience, with continuous support through
-          excellent customer service. Our goal is to be your first destination
-          for everything related to fashion and beauty, and we always strive to
-          provide the best every time you shop with us.
+        <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto text-left rtl:text-right">
+          {t("aboutUs.content")}
         </p>
       </section>
 
-      {/* History Section */}
+      {/* service Section */}
       <section className="container mx-auto px-6 py-12">
         <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
-          History of the Brand
+          {t("aboutUs.ourServices")}
         </h2>
-        <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto text-left md:text-center">
-          Our brand was founded on a passion for fashion and beauty, with the
-          aim of providing high-quality products that combine elegance and
-          distinction. From the beginning, we have been committed to providing a
-          variety of clothing and beauty products that meet the needs and tastes
-          of our customers. We started out as a small company in Baghdad, and
-          through dedication and focus on customer satisfaction, we have grown
-          to become a trusted name in the industry. Today, we continue to evolve
-          by offering the latest trends and the best products, while maintaining
-          our core values ​​of excellence and customer service.
+        <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
+          <ul class="list-disc text-left ml-2 md:ml-0 rtl:text-right">
+            <li>{t("aboutUs.services.1")}</li>
+            <li>{t("aboutUs.services.2")}</li>
+            <li>{t("aboutUs.services.3")}</li>
+          </ul>
         </p>
       </section>
 
-      {/* Promise Section */}
       <section className="container mx-auto px-6 py-12">
         <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
-          Our Promise
+          {t("aboutUs.areasOfSpecialization")}
         </h2>
-        <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto text-left md:text-center">
-          Our promise is to provide high-quality clothing and beauty products
-          that reflect the latest trends and meet our customers’ expectations.
-          We are committed to providing exceptional service, ensuring a seamless
-          shopping experience, and we constantly strive to improve our services
-          to meet the changing needs of our customers. At the core of our brand
-          is a commitment to quality, reliability and customer satisfaction,
-          ensuring that every purchase adds value and satisfaction to our
-          customers.{" "}
+        <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto text-left">
+          <ul class="list-disc ml-2 md:ml-0 rtl:text-right">
+            <li>{t("aboutUs.specializations.1")}</li>
+            <li>{t("aboutUs.specializations.2")}</li>
+            <li>{t("aboutUs.specializations.3")}</li>
+            <li>{t("aboutUs.specializations.4")}</li>
+          </ul>
+        </p>
+      </section>
+
+      {/* Goals Section */}
+      <section className="container mx-auto px-6 py-12">
+        <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
+          {t("aboutUs.ourGoals")}
+        </h2>
+        <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto text-left">
+          <ul class="list-disc ml-2 md:ml-0 rtl:text-right">
+            <li>{t("aboutUs.Goals.1")}</li>
+            <li>{t("aboutUs.Goals.2")}</li>
+            <li>{t("aboutUs.Goals.3")}</li>
+          </ul>
+        </p>
+      </section>
+
+      {/* history Section */}
+      <section className="container mx-auto px-6 py-12">
+        <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
+          {t("aboutUs.history")}
+        </h2>
+        <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto text-left rtl:text-right mb-4">
+          {t("aboutUs.historyContent")}
+        </p>
+        <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto">
+          <ul class="list-disc text-left ml-2 md:ml-0 rtl:text-right">
+            <li>{t("aboutUs.historyList.1")}</li>
+            <li>{t("aboutUs.historyList.2")}</li>
+            <li>{t("aboutUs.historyList.3")}</li>
+            <li>{t("aboutUs.historyList.4")}</li>
+            <li>{t("aboutUs.historyList.5")}</li>
+          </ul>
+        </p>
+      </section>
+
+      {/* publicationsnd Achievements Section */}
+      <section className="container mx-auto px-6 py-12">
+        <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
+          {t("aboutUs.publicationsndAchievements")}
+        </h2>
+
+        <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto text-left">
+          <ul class="list-disc text-left ml-2 md:ml-0 rtl:text-right">
+            <li>{t("aboutUs.publications.1")}</li>
+            <li>{t("aboutUs.publications.2")}</li>
+            <li>{t("aboutUs.publications.3")}</li>
+            <li>{t("aboutUs.publications.4")}</li>
+          </ul>
+        </p>
+      </section>
+
+      {/* training Section */}
+      <section className="container mx-auto px-6 py-12">
+        <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
+          {t("aboutUs.training")}
+        </h2>
+        <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto text-left">
+          <ul class="list-disc ml-2 md:ml-0 rtl:text-right">
+            <li>{t("aboutUs.trainings.1")}</li>
+            <li>{t("aboutUs.trainings.2")}</li>
+            <li>{t("aboutUs.trainings.3")}</li>
+            <li>{t("aboutUs.trainings.4")}</li>
+          </ul>
+        </p>
+      </section>
+        
+        {/* keyAchievements Section */}
+      <section className="container mx-auto px-6 py-12">
+        <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
+          {t("aboutUs.keyAchievements")}
+        </h2>
+        <p className="text-lg text-gray-700 leading-relaxed max-w-2xl mx-auto text-left">
+          <ul class="list-disc ml-2 md:ml-0 rtl:text-right">
+            <li>{t("aboutUs.achievements.1")}</li>
+            <li>{t("aboutUs.achievements.2")}</li>
+            <li>{t("aboutUs.achievements.3")}</li>
+          </ul>
         </p>
       </section>
     </div>

@@ -6,7 +6,7 @@ import i18n from "../lib/i18next";
 const NavLink = ({ to, children }) => (
   <Link
     to={to}
-    className="relative font-medium text-gray-700 transition-colors duration-300 hover:text-gray-900 
+    className="relative font-medium text-[#C4AC6D] transition-colors duration-300 hover:text-[#C4AC6D]
                before:absolute before:inset-x-0 before:-bottom-1 before:h-0.5 
                before:origin-left before:scale-x-0 before:transform 
                before:rounded-full before:bg-gray-900 before:transition-all 
@@ -19,6 +19,7 @@ const NavLink = ({ to, children }) => (
 export function MyNavbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
+  const [currentLanguage, setCurrentLanguage] = useState("en");
 
   useEffect(() => {
     const handleResize = () => {
@@ -30,30 +31,38 @@ export function MyNavbar() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  useEffect(() => {
+    // Update document direction on language change
+    document.documentElement.setAttribute(
+      "dir",
+      currentLanguage === "ar" ? "rtl" : "ltr"
+    );
+  }, [currentLanguage]);
+
   const navItems = [
     { name: t("home"), path: "/" },
     { name: t("gallery"), path: "/gallery" },
     { name: t("about"), path: "/about" },
   ];
 
-  const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
-
-    document.documentElement.setAttribute("dir", lng === "ar" ? "rtl" : "ltr");
+  const toggleLanguage = () => {
+    const newLanguage = currentLanguage === "en" ? "ar" : "en";
+    setCurrentLanguage(newLanguage);
+    i18n.changeLanguage(newLanguage);
   };
 
   return (
-    <nav className="sticky top-0 z-10 bg-white/80 backdrop-blur-md shadow-sm">
+    <nav className="sticky top-0 z-10 bg-blue-900 backdrop-blur-md shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2">
         <div className="flex items-center justify-between h-16 md:h-20">
           <div className="flex">
-            <Link to="/" className="flex-shrink-0">
+            <NavLink to="/" className="flex-shrink-0">
               <img
                 src="/logo.png"
                 alt="beirut Logo"
                 className="w-28 md:w-28 object-cover"
               />
-            </Link>
+            </NavLink>
           </div>
 
           <div className="hidden md:block">
@@ -63,15 +72,13 @@ export function MyNavbar() {
                   {item.name}
                 </NavLink>
               ))}
-              {/* Language Toggle Button */}
-              <div>
-                <button onClick={() => changeLanguage("en")} className="mx-2">
-                  EN
-                </button>
-                <button onClick={() => changeLanguage("ar")} className="mx-2">
-                  AR
-                </button>
-              </div>
+              {/* Single Language Toggle Button */}
+              <button
+                onClick={toggleLanguage}
+                className="py-1 px-3 bg-gray-200 rounded hover:bg-gray-300"
+              >
+                {currentLanguage === "en" ? "AR" : "EN"}
+              </button>
             </div>
           </div>
 
@@ -133,6 +140,15 @@ export function MyNavbar() {
                 {item.name}
               </Link>
             ))}
+            {/* Language Toggle Button in Mobile Menu */}
+            <div className="pt-4">
+              <button
+                onClick={toggleLanguage}
+                className="py-2 px-4 w-full bg-gray-200 rounded hover:bg-gray-300"
+              >
+                {currentLanguage === "en" ? "AR" : "EN"}
+              </button>
+            </div>
           </div>
         </div>
       )}

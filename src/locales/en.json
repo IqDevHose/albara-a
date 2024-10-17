@@ -21,23 +21,55 @@
   },
   "aboutUs": {
     "title": "About Us",
-    "content": "We are Al-Bara’a Law Office, a legal firm specializing in providing legal consultations and defense in criminal, commercial, and civil cases. The founder of the office has over twenty-five years of experience in the judiciary and legal practice, with a proven track record of delivering justice fairly at all stages of trials and legal proceedings.",
-    "ourServices": {
-      "1": "Legal Consultations in various fields such as criminal law, family law, and commercial law.",
-      "2": "Legal Representation for clients in civil, commercial, and criminal courts.",
-      "3": "Legal Research and case analysis, along with the preparation of advanced legal strategies."
+    "content": "Al-Bara’a Law Office is a prestigious legal firm offering specialized legal consultations and representation across various fields, with a focus on criminal, commercial, and civil law. The office is led by [Your Name], an experienced judge and lawyer with over twenty-five years in judiciary and legal practice. Our commitment to excellence ensures that we provide high-quality legal services, aiming to deliver justice and protect the rights of our clients.",
+    "ourServices": "Our Services",
+    "services": {
+      "1": "Specialized Legal Consultations: Offering expert advice in areas such as criminal law, family law, labor law, contracts, commercial law, and civil law.",
+      "2": "Court Representation: Representing clients in civil, commercial, and criminal courts, handling complex cases with thorough analysis of evidence and strong defense preparation.",
+      "3": "Legal Research and Case Analysis: Conducting advanced legal research, analyzing cases, and preparing customized litigation strategies for our clients."
     },
-    "ourGoals": {
-      "1": "Ensure justice and protect the legal rights of our clients.",
-      "2": "Provide specialized legal advice in accordance with the latest laws and regulations.",
-      "3": "Enhance the level of excellence and professionalism in delivering legal services."
+    "areasOfSpecialization": "Areas of Specialization",
+    "specializations": {
+      "1": "Criminal Law: Defending clients in complex criminal cases, preparing appropriate defenses, and analyzing criminal evidence.",
+      "2": "Family Law: Handling family-related cases such as divorce, child custody, and property division.",
+      "3": "Commercial Law: Providing legal consultation and representation in business disputes, commercial contracts, and arbitration.",
+      "4": "Civil Law: Addressing civil matters, including contract disputes, personal status laws, and civil liabilities."
+    },
+    "ourGoals": "Our Goals",
+    "Goals": {
+      "1": "Achieving Justice: We aim to represent our clients with the highest standards of professionalism, ensuring justice is served fairly.",
+      "2": "Contributing to Legal Development: We are committed to enhancing legal understanding through participation in workshops and legal training.",
+      "3": "Protecting Rights: We focus on safeguarding the human and legal rights of our clients in accordance with current laws and regulations."
     },
     "history": "Our History",
-    "historyContent": "Al-Bara’a Law Office was established in 2024, backed by a strong educational and practical background. The founder holds a Master's degree in Private Law from Azad University of Isfahan in Iran and a diploma in Judicial Sciences from the Judicial Institute in Baghdad. He has held various judicial positions, including:",
+    "historyContent": "Al-Bara’a Law Office was founded by [Your Name], a former judge with extensive experience in criminal, commercial, and civil law. Over the course of his career, the founder has held several key judicial positions:",
     "historyList": {
-      "1": "JJudge of the Family Court in Sadr City.",
-      "2": "Judge of the Commercial Court in Basra.",
-      "3": "Responsible for developing investigation procedures in cases of corruption and immigration."
+      "1": "Lawyer and Judge: [Your Name] has over 25 years of experience practicing law, including serving as a judge in civil and commercial courts in Baghdad and Basra.",
+      "2": "Commercial Court Judge: Presided over complex commercial disputes and contract cases as a judge at the Commercial Court in Basra.",
+      "3": "Civil Court Judge: Oversaw civil cases in several courts, including Basra and Maqil.",
+      "4": "Family Court Judge: Led family court cases in Sadr City, handling complex family matters and ensuring the protection of family rights.",
+      "5": "Advisor in Corruption and Immigration Cases: Developed investigation procedures for corruption and immigration cases, and supervised Interpol inquiries at the highest levels."
+    },
+    "publicationsndAchievements": "Publications and Achievements",
+    "publications": {
+      "1": "Editor-in-Chief: Supervised the publication of the 'Legal Truth' magazine from 2008 to 2016, specializing in legal affairs.",
+      "2": "Legal Articles: Authored numerous articles in the Iraqi Judicial Council newspaper and legal digital magazine, discussing various legal issues.",
+      "3": "Television Programs: Featured in a prominent television show, 'Legal Files', which focused on important legal matters in Iraq.",
+      "4": "Notable Judicial Decisions: Delivered key legal rulings in the Federal Court and Basra Court of Appeal, including cases on civil rights protection and legislative annulment."
+    },
+    "training": "Training and Advanced Courses",
+    "trainings": {
+      "1": "Rule of Law and Judicial Reform: Organized by the U.S. Department of Justice.",
+      "2": "Cross-Border Crimes and Judicial Cooperation: Organized by the European Union.",
+      "3": "International Commercial Arbitration: Organized by the U.S. Embassy in Iraq.",
+      "4": "Money Laundering and Financial Crimes: Organized by the United Nations.",
+      "5": "Institute of Criminal Sciences: Specialized training in Italy."
+    },
+    "keyAchievements": "Key Achievements",
+    "achievements": {
+      "1": "Legal Truth Magazine: Led the editorial team of a prominent legal magazine published from 2008 to 2016.",
+      "2": "Published Articles: Authored articles featured in the Iraqi Judicial Council newspaper and online legal platforms.",
+      "3": "Television Program: Appeared in a television program titled 'Legal Files', discussing significant legal issues in Iraq."
     }
   }
 }

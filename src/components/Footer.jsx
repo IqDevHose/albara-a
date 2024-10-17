@@ -11,22 +11,20 @@ const Footer = () => {
     <footer className="bg-gray-900 text-gray-300 py-8">
       <div className="container mx-auto flex flex-col md:flex-row justify-between items-center space-y-6 md:space-y-0 px-6">
         {/* Left Section - Logo and Company Name */}
-                {/* Right Section - Contact Information */}
-                <div>
-          <div className="text-left">
+        {/* Right Section - Contact Information */}
+        <div>
+          <div className="text-left rtl:text-right mb-2">
             <h3 className="text-lg md:text-xl font-bold text-white">
-            {t("footer.companyName")}
+              {t("footer.companyName")}
             </h3>
-            <p className="text-sm text-gray-400">
-            {t("footer.rights")}
-            </p>
+            <p className="text-sm text-gray-400">{t("footer.rights")}</p>
           </div>
 
           <div className="flex flex-col ">
             <div className="flex items-center gap-3">
               <FaPhone />
               <a href="tel:+9647510851305" className="hover:text-gray-200">
-              {t("footer.phone")}
+                {t("footer.phone")}
               </a>
             </div>
             <div className="flex items-center gap-3">
