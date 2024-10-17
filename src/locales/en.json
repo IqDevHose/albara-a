@@ -13,5 +13,31 @@
     "contactUs": "Contact Us",
     "contactUsContent": "Feel free to send us a message",
     "contactUsButton": "Get Started"
+  },
+  "footer": {
+    "companyName": "Beirut Road Trading Company - Limited Liability.",
+    "rights": "2024 Beirut Road Trading Company - Limited Liability. All Rights Reserved.",
+    "phone": "+964 7510851305"
+  },
+  "aboutUs": {
+    "title": "About Us",
+    "content": "We are Al-Bara’a Law Office, a legal firm specializing in providing legal consultations and defense in criminal, commercial, and civil cases. The founder of the office has over twenty-five years of experience in the judiciary and legal practice, with a proven track record of delivering justice fairly at all stages of trials and legal proceedings.",
+    "ourServices": {
+      "1": "Legal Consultations in various fields such as criminal law, family law, and commercial law.",
+      "2": "Legal Representation for clients in civil, commercial, and criminal courts.",
+      "3": "Legal Research and case analysis, along with the preparation of advanced legal strategies."
+    },
+    "ourGoals": {
+      "1": "Ensure justice and protect the legal rights of our clients.",
+      "2": "Provide specialized legal advice in accordance with the latest laws and regulations.",
+      "3": "Enhance the level of excellence and professionalism in delivering legal services."
+    },
+    "history": "Our History",
+    "historyContent": "Al-Bara’a Law Office was established in 2024, backed by a strong educational and practical background. The founder holds a Master's degree in Private Law from Azad University of Isfahan in Iran and a diploma in Judicial Sciences from the Judicial Institute in Baghdad. He has held various judicial positions, including:",
+    "historyList": {
+      "1": "JJudge of the Family Court in Sadr City.",
+      "2": "Judge of the Commercial Court in Basra.",
+      "3": "Responsible for developing investigation procedures in cases of corruption and immigration."
+    }
   }
 }

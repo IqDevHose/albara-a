@@ -88,9 +88,9 @@ const Home = () => {
       {/* Gallery Section */}
       <section className="py-10 bg-gray-50">
         <div className="container mx-auto px-4 max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-bold text-center mb-8">
-            {t("homePage.OurGallery")} {/* Translate Gallery section title */}
-          </h1>
+          {/* <h1 className="text-4xl md:text-5xl font-bold text-center mb-8">
+            {t("homePage.OurGallery")}
+          </h1> */}
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
             {/* Left Column: Two stacked images */}
             <div className="grid grid-rows-2 gap-4">

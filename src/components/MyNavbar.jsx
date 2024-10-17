@@ -49,9 +49,9 @@ export function MyNavbar() {
           <div className="flex">
             <Link to="/" className="flex-shrink-0">
               <img
-                src="/beruit-WHITEBACKGROUND.svg"
+                src="/logo.png"
                 alt="beirut Logo"
-                className="w-28 md:w-36 object-cover"
+                className="w-28 md:w-28 object-cover"
               />
             </Link>
           </div>
