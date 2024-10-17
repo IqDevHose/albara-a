@@ -8,11 +8,7 @@ const Gallery = () => {
   const galleryImages = [];
 
   // Define static prices for images in IQD (ending in 500, 250, 750, or 000)
-  const staticPrices = [
-    40500, 45500, 35000, 50000, 42750, 60950, 50500, 70000, 40000, 55000,
-    37500, 48000, 61500, 38500, 45000, 30000, 65750, 33950, 57000, 39500,
-    // Add more prices as needed to cover all images from 34 to 71
-  ];
+
 
   // Generate paths for images from 34 to 71 with static prices in IQD
   for (let i = startImageNumber; i <= endImageNumber; i++) {

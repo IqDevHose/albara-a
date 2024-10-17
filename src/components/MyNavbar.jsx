@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import i18n from '../lib/i18next';
+import i18n from "../lib/i18next";
 
 const NavLink = ({ to, children }) => (
   <Link
@@ -33,14 +33,13 @@ export function MyNavbar() {
   const navItems = [
     { name: t("home"), path: "/" },
     { name: t("gallery"), path: "/gallery" },
-    { name: t("about"), path: "/about" }
+    { name: t("about"), path: "/about" },
   ];
 
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
 
-    document.documentElement.setAttribute("dir", lng === 'ar' ? 'rtl' : 'ltr');
-
+    document.documentElement.setAttribute("dir", lng === "ar" ? "rtl" : "ltr");
   };
 
   return (
@@ -66,8 +65,12 @@ export function MyNavbar() {
               ))}
               {/* Language Toggle Button */}
               <div>
-                <button onClick={() => changeLanguage('en')} className="mx-2">EN</button>
-                <button onClick={() => changeLanguage('ar')} className="mx-2">AR</button>
+                <button onClick={() => changeLanguage("en")} className="mx-2">
+                  EN
+                </button>
+                <button onClick={() => changeLanguage("ar")} className="mx-2">
+                  AR
+                </button>
               </div>
             </div>
           </div>
