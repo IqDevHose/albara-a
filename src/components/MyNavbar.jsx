@@ -1,20 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18n from "../lib/i18next";
 
-const NavLink = ({ to, children }) => (
-  <Link
-    to={to}
-    className="relative font-medium text-[#C4AC6D] transition-colors duration-300 hover:text-[#C4AC6D]
-               before:absolute before:inset-x-0 before:-bottom-1 before:h-0.5 
-               before:origin-left before:scale-x-0 before:transform 
-               before:rounded-full before:bg-gray-900 before:transition-all 
-               before:duration-200 hover:before:scale-x-100"
-  >
-    {children}
-  </Link>
-);
+
 
 export function MyNavbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -68,7 +57,7 @@ export function MyNavbar() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline gap-6 text-xl">
               {navItems.map((item) => (
-                <NavLink key={item.name} to={item.path}>
+                <NavLink key={item.name} to={item.path} className={({ isActive }) => isActive ? "text-white" : "text-[#C4AC6D]"}>
                   {item.name}
                 </NavLink>
               ))}
