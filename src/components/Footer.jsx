@@ -26,10 +26,8 @@ const Footer = () => {
               <FaWhatsapp />
               <FaTelegram />
               <FaViber />
-
-
               <a href="tel:+9647707873923" className="hover:text-gray-200">
-                0770 787 3923
+                07707873923
               </a>
             </div>
             <div className="flex items-center gap-3">
