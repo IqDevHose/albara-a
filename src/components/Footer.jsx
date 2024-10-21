@@ -30,10 +30,10 @@ const Footer = () => {
             <div className="flex items-center gap-3">
               <MdEmail />
               <a
-                href="mailto:info@albaraahcompany"
+                href="mailto:info@albaraahcompany.iq"
                 className="hover:text-gray-200"
               >
-                info@albaraahcompany
+                info@albaraahcompany.iq
               </a>
             </div>
           </div>
