@@ -135,7 +135,7 @@ export function MyNavbar() {
                 onClick={toggleLanguage}
                 className="py-2 px-4 w-full bg-gray-200 rounded hover:bg-gray-300"
               >
-                {currentLanguage === "en" ? "AR" : "EN"}
+                {currentLanguage === "en" ? "ARABIC" : "ENGLISH"}
               </button>
             </div>
           </div>
