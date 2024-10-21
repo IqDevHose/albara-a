@@ -1,8 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
 import { FaPhone, FaTelegram, FaViber, FaWhatsapp } from "react-icons/fa6";
 import { useTranslation } from "react-i18next"; // Import useTranslation
+import { FaMapMarkerAlt } from "react-icons/fa";
 
 const Footer = () => {
   const { t } = useTranslation(); // Initialize useTranslation hook
@@ -49,6 +49,18 @@ const Footer = () => {
                 className="hover:text-gray-200"
               >
                 jaafar0310@gmail.com
+              </a>
+            </div>
+            {/* New Google Maps Location Section */}
+            <div className="flex items-center gap-3">
+              <FaMapMarkerAlt />
+              <a
+                href="https://maps.app.goo.gl/mn7twD5SBMk72tEv7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-gray-200"
+              >
+                {t("footer.location")}
               </a>
             </div>
           </div>
