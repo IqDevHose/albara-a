@@ -23,7 +23,7 @@ const Footer = () => {
           <div className="flex flex-col ">
             <div className="flex items-center gap-3">
               <FaPhone />
-              <a href="tel:+9647510851305" className="hover:text-gray-200">
+              <a href="tel:+9647707873923" className="hover:text-gray-200">
                 {t("footer.phone")}
               </a>
             </div>
