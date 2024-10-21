@@ -48,7 +48,7 @@ export function MyNavbar() {
             <NavLink to="/" className="flex-shrink-0">
               <img
                 src="/logo.png"
-                alt="beirut Logo"
+                alt="albaraah Logo"
                 className="w-28 md:w-28 object-cover"
               />
             </NavLink>
