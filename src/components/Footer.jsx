@@ -23,12 +23,12 @@ const Footer = () => {
           <div className="flex flex-col ">
             <div className="flex items-center gap-3">
               <FaPhone />
-              <FaWhatsapp />
-              <FaTelegram />
-              <FaViber />
               <a href="tel:+9647707873923" className="hover:text-gray-200">
                 07707873923
               </a>
+              <FaWhatsapp />
+              <FaTelegram />
+              <FaViber />
             </div>
             <div className="flex items-center gap-3">
               <FaPhone />
