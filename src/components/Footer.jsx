@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { MdEmail } from "react-icons/md";
-import { FaPhone } from "react-icons/fa6";
+import { FaPhone, FaTelegram, FaViber, FaWhatsapp } from "react-icons/fa6";
 import { useTranslation } from "react-i18next"; // Import useTranslation
 
 const Footer = () => {
@@ -23,8 +23,25 @@ const Footer = () => {
           <div className="flex flex-col ">
             <div className="flex items-center gap-3">
               <FaPhone />
+              <FaWhatsapp />
+              <FaTelegram />
+              <FaViber />
+
+
               <a href="tel:+9647707873923" className="hover:text-gray-200">
-                {t("footer.phone")}
+                0770 787 3923
+              </a>
+            </div>
+            <div className="flex items-center gap-3">
+              <FaPhone />
+              <a href="tel:+9647801397214" className="hover:text-gray-200">
+                07801397214
+              </a>
+            </div>
+            <div className="flex items-center gap-3">
+              <FaPhone />
+              <a href="tel:+9647748011579" className="hover:text-gray-200">
+                07748011579
               </a>
             </div>
             <div className="flex items-center gap-3">
