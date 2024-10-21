@@ -123,7 +123,7 @@ export function MyNavbar() {
               <Link
                 key={item.name}
                 to={item.path}
-                className="block px-3 py-3 rounded-md text-lg font-medium text-gray-700 hover:text-gray-900 hover:bg-gray-50"
+                className="block px-3 py-3 rounded-md text-lg font-medium  hover:text-gray-900 hover:bg-gray-50"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
