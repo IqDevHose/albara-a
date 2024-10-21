@@ -3,8 +3,6 @@ import { Link, NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import i18n from "../lib/i18next";
 
-
-
 export function MyNavbar() {
   const [isOpen, setIsOpen] = useState(false);
   const { t } = useTranslation();
@@ -57,7 +55,13 @@ export function MyNavbar() {
           <div className="hidden md:block">
             <div className="ml-10 flex items-baseline gap-6 text-xl">
               {navItems.map((item) => (
-                <NavLink key={item.name} to={item.path} className={({ isActive }) => isActive ? "text-white" : "text-[#C4AC6D]"}>
+                <NavLink
+                  key={item.name}
+                  to={item.path}
+                  className={({ isActive }) =>
+                    isActive ? "text-white" : "text-[#C4AC6D]"
+                  }
+                >
                   {item.name}
                 </NavLink>
               ))}
@@ -80,7 +84,7 @@ export function MyNavbar() {
               <span className="sr-only">Open main menu</span>
               {!isOpen ? (
                 <svg
-                  className="block h-6 w-6"
+                  className="block h-6 w-6 text-white"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
                   viewBox="0 0 24 24"
@@ -123,7 +127,7 @@ export function MyNavbar() {
               <Link
                 key={item.name}
                 to={item.path}
-                className="block px-3 py-3 rounded-md text-lg font-medium  hover:text-gray-900 hover:bg-gray-50"
+                className="block px-3 py-3 rounded-md text-lg font-medium hover:text-gray-900 hover:bg-gray-50"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
