@@ -30,10 +30,10 @@ const Footer = () => {
             <div className="flex items-center gap-3">
               <MdEmail />
               <a
-                href="mailto:info@beirut-road.iq"
+                href="mailto:info@albaraahcompany"
                 className="hover:text-gray-200"
               >
-                info@beirut-road.iq
+                info@albaraahcompany
               </a>
             </div>
           </div>
@@ -41,7 +41,7 @@ const Footer = () => {
 
         <img
           src="/logo.png"
-          alt="beirut Logo"
+          alt="albaraa Logo"
           className="hidden md:block md:w-40 object-cover"
         />
       </div>
