@@ -114,8 +114,8 @@ const About = () => {
           </ul>
         </p>
       </section>
-        
-        {/* keyAchievements Section */}
+
+      {/* keyAchievements Section */}
       <section className="container mx-auto px-6 py-12">
         <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
           {t("aboutUs.keyAchievements")}
@@ -127,6 +127,24 @@ const About = () => {
             <li>{t("aboutUs.achievements.3")}</li>
           </ul>
         </p>
+      </section>
+
+      {/* Map Section */}
+      <section className="container mx-auto px-6 py-12">
+        <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
+          {t("aboutUs.ourLocation")}
+        </h2>
+        <div className="flex justify-center">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d427.62208007987545!2d44.34298923582706!3d33.324253703296804!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x15577f00112c225d%3A0xef33d9dd01ca5ba8!2z2LTYsdmD2Kkg2KfZhNio2LHYp9ih2Kkg2YTZhNmF2K3Yp9mF2KfYqSDZiNin2YTYp9iz2KrYtNin2LHYp9iqINin2YTZgtin2YbZiNmG2YrYqQ!5e0!3m2!1sen!2sbg!4v1729600665739!5m2!1sen!2sbg"
+            width="600"
+            height="450"
+            style={{ border: 0 }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
       </section>
     </div>
   );
