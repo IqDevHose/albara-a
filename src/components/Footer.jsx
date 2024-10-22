@@ -55,7 +55,7 @@ const Footer = () => {
             <div className="flex items-center gap-3">
               <FaMapMarkerAlt />
               <a
-                href="https://maps.app.goo.gl/mn7twD5SBMk72tEv7"
+                href="https://maps.app.goo.gl/YY18PMjkj6fzb9J38"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-gray-200"
