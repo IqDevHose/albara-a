@@ -78,7 +78,7 @@ export function MyNavbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-gray-700 hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500"
+              className="inline-flex items-center justify-center p-2 rounded-md  hover:text-gray-900 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-gray-500"
               aria-expanded="false"
             >
               <span className="sr-only">Open main menu</span>
@@ -127,7 +127,7 @@ export function MyNavbar() {
               <Link
                 key={item.name}
                 to={item.path}
-                className="block px-3 py-3 rounded-md text-lg font-medium hover:text-gray-900 hover:bg-gray-50"
+                className="block px-3 py-3 text-white rounded-md text-lg font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 {item.name}
